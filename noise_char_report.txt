@@ -1,0 +1,93 @@
+# Report
+
+The data files were loaded from the following path ${data_storage_path}.
+
+The analysis was run on ${analysis_date} with the following command line:
+
+'''
+${command_line}
+'''
+
+Each of the resulting plots shows the interpolation and data used:
+
+% for pol_result in analysis_results:
+
+# Polarimeter: ${pol_result["pol_name"]}
+
+Plot of ${pol_result["pol_name"]} ${type_of_data}Q1
+
+wn_delta : ${pol_result["Q1_wn_delta"]}
+
+wn_interp : ${pol_result["Q1_wn"]}
+
+f_knee_delta : ${pol_result["Q1_fknee_delta"]} ± ${pol_result["sigma_fknee_delta_Q1"]}
+
+f_knee_interp : ${pol_result["Q1_fknee_interp"]} ± ${pol_result["err_fknee_interpol_Q1"]}
+
+sigma : ${pol_result["sigmaQ1_f"]} ± ${pol_result["err_sigma_interpol_Q1"]}
+
+alpha : ${pol_result["alphaQ1_f"]} ± ${pol_result["err_alpha_interpol_Q1"]}
+
+
+![](${pol_result["DEMQ1_plots_file_name"]})
+
+______________________________
+
+Plot of ${pol_result["pol_name"]} ${type_of_data}Q2
+
+wn_delta : ${pol_result["Q2_wn_delta"]}
+
+wn_interp : ${pol_result["Q2_wn"]}
+
+f_knee_delta : ${pol_result["Q2_fknee_delta"]} ± ${pol_result["sigma_fknee_delta_Q2"]}
+
+f_knee_interp : ${pol_result["Q2_fknee_interp"]} ± ${pol_result["err_fknee_interpol_Q2"]}
+
+sigma : ${pol_result["sigmaQ2_f"]} ± ${pol_result["err_sigma_interpol_Q2"]}
+
+alpha : ${pol_result["alphaQ2_f"]} ± ${pol_result["err_alpha_interpol_Q2"]}
+
+
+![](${pol_result["DEMQ2_plots_file_name"]})
+
+______________________________
+
+Plot of ${pol_result["pol_name"]} ${type_of_data}U1
+
+wn_delta : ${pol_result["U1_wn_delta"]}
+
+wn_interp : ${pol_result["U1_wn"]}
+
+f_knee_delta : ${pol_result["U1_fknee_delta"]} ± ${pol_result["sigma_fknee_delta_U1"]}
+
+f_knee_interp : ${pol_result["U1_fknee_interp"]} ± ${pol_result["err_fknee_interpol_U1"]}
+
+sigma : ${pol_result["sigmaU1_f"]} ± ${pol_result["err_sigma_interpol_U1"]}
+
+alpha : ${pol_result["alphaU1_f"]} ± ${pol_result["err_alpha_interpol_U1"]}
+
+![](${pol_result["DEMU1_plots_file_name"]})
+
+______________________________
+
+Plot of ${pol_result["pol_name"]} ${type_of_data}U2
+
+wn_delta : ${pol_result["U2_wn_delta"]}
+
+wn_interp : ${pol_result["U2_wn"]}
+
+f_knee_delta : ${pol_result["U2_fknee_delta"]} ± ${pol_result["sigma_fknee_delta_U2"]}
+
+f_knee_interp : ${pol_result["U2_fknee_interp"]}  ± ${pol_result["err_fknee_interpol_U2"]}
+
+sigma : ${pol_result["sigmaU2_f"]} ± ${pol_result["err_sigma_interpol_U2"]}
+
+alpha : ${pol_result["alphaU2_f"]} ± ${pol_result["err_alpha_interpol_U2"]}
+
+![](${pol_result["DEMU2_plots_file_name"]})
+
+______________________________
+
+% endfor
+
+This report can be found at this directory: ${output}
