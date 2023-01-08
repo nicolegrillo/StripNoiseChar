@@ -58,7 +58,7 @@ Input arguments required:
 
 ## Example
 
-To return the plot on data that was acquired from 14/12/2022 at 16:30:00 to 15/12/2022 at 11:30:00, this is what you would run: 
+To return the plots on data that was acquired from 14/12/2022 at 16:30:00 to 15/12/2022 at 11:30:00, this is what you would run: 
 
     `./cross_correlation.py /Users/nicolegrillo/Desktop/Tesi/Test_data/ "2022-12-14 16:30:25" "2022-12-15 11:30:24" R6 ~/data_analysis/cross_correlation/14-12-22/R6 DEM`
   
