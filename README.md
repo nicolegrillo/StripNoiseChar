@@ -1,7 +1,7 @@
 # StripNoiseChar
 
-Strip noise analysis and characterisation for my thesis project (winter 2022).
-This repository works as a storage for the functions and codes that help find some useful Strip parameters that characterize the noise.
+Strip polarimeters noise analysis and characterization for my thesis project (winter 2022).
+This repository works as a storage for the functions and scripts I developed to find some useful noise characterization parameters.
 
 # Noise characterization
 The Python script `noise_evaluation.py` finds the optimal parameters for the noise curve in the Fourier space, with two different methods. It returns a report file complete with data graphs and printed results via the template file `noise_char_report.txt`. 
@@ -22,7 +22,7 @@ To operate the analysis on data that was acquired from 14/12/2022 at 16:30:00 to
   
 where `/Users/nicolegrillo/Desktop/Tesi/Test_data/` and `~/data_analysis/complete_noise_interpolation/14-12-2022/R6` are respectively the data path and the results path in my computer.
 
-# Knee frequency results comparison
+# Comparison of knee frequency results 
 
 The Python script `error_data_plots.py` returns a single plot that shows the two *f_knee* parameter results obtained with the two different methods (interpolation and delta). The plot is referred to a specific board specified by the user when running the script. 
 
