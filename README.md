@@ -14,7 +14,7 @@ Input arguments required:
 - Results path where to save the report;
 - Data type (PWR or DEM).
 
-## Example
+### Example
 
 To operate the analysis on data that was acquired from 14/12/2022 at 16:30:00 to 15/12/2022 at 11:30:00, this is what you would run: 
 
@@ -36,7 +36,7 @@ Input arguments required:
 
 The script then asks the user to specify which of the board to analyze, with respect to the previously specified tag. The boards from which to choose are: B, G, I, O, R, V, W, Y. If the user chooses a non-existing board the script returns the values for W as default. 
 
-## Example
+### Example
 
 To return the plot on data that was acquired from 14/12/2022 at 16:30:00 to 15/12/2022 at 11:30:00, this is what you would run: 
 
@@ -56,7 +56,7 @@ Input arguments required:
 - Results path where to save the report;
 - Data type (PWR or DEM).
 
-## Example
+### Example
 
 To return the plots on data that was acquired from 14/12/2022 at 16:30:00 to 15/12/2022 at 11:30:00, this is what you would run: 
 
