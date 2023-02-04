@@ -33,8 +33,9 @@ def get_acquisition_tags(ds: DataStorage, date_range: Tuple[str, str], pol_name:
 def load_sci_data(ds: DataStorage, data_type, pol_name, start_time):
 
     mjd_start = Time(start_time[0], format="iso").to_value(format="mjd")
+    mjd_end = Time(start_time[1], format="iso").to_value(format="mjd")
 
-    times, values = ds.load_sci((mjd_start, mjd_start + 3600 * 15 / 86400), polarimeter=pol_name,
+    times, values = ds.load_sci((mjd_start, end), polarimeter=pol_name,
                                 data_type=f"{data_type}")
 
     times = Time(times, format="mjd").to_value(format="unix")  # time values are converted for the calculations
@@ -111,7 +112,7 @@ def results_rounding(value, error):
     return result
 
 
-def all_pol_names(board_name):
+def all_pol_names(board_name): 
 
     B = ["B0","B1", "B2", "B3", "B4", "B5", "B6"]
     G = ["G0", "G1", "G2", "G3", "G4", "G5", "G6"]
@@ -143,7 +144,7 @@ def all_pol_names(board_name):
     if board_name == "Y":
         return Y
 
-    return W
+    return W  # in case of no valid choice, return the W elements
 
 
 def noise_characterisation(ds: DataStorage, output_dir: Path, start_time, data_type, board_name):
@@ -156,7 +157,7 @@ def noise_characterisation(ds: DataStorage, output_dir: Path, start_time, data_t
 
     # plt.figure(figsize=(12, 7))
 
-    for pol_name in ["R0", "R4", "R5", "R6"]:
+    for pol_name in board_pol_names:
 
         channel_xtick = 0  # x tick for plot
 
@@ -206,7 +207,7 @@ def noise_characterisation(ds: DataStorage, output_dir: Path, start_time, data_t
 
         boardname_xtick = boardname_xtick + 1
 
-    plt.xticks(np.arange(1, 5, 1.0), ["R0", "R4", "R5", "R6"])  # (np.arange(1, 7, 1.0), all_pol_names(board_name))
+    plt.xticks(np.arange(1, len(board_pol_names), 1.0), board_pol_names)  # prepare ticks for graphs to plot the values
     plt.legend(['f_knee delta', 'f_knee interpol'])
 
     plot_file_name = output_dir / f"f_knee_{data_type}_plots.png"
