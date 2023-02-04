@@ -33,8 +33,9 @@ def get_acquisition_tags(ds: DataStorage, date_range: Tuple[str, str], pol_name:
 def load_sci_data(ds: DataStorage, data_type, pol_name, start_time):
 
     mjd_start = Time(start_time[0], format="iso").to_value(format="mjd")
+    mjd_start = Time(start_time[0], format="iso").to_value(format="mjd")
 
-    times, values = ds.load_sci((mjd_start, mjd_start + 3600 * 15 / 86400), polarimeter=pol_name,
+    times, values = ds.load_sci((mjd_start, mjd_end), polarimeter=pol_name,
                                 data_type=f"{data_type}")
 
     times = Time(times, format="mjd").to_value(format="unix")  # time values are converted for the calculations
