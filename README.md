@@ -46,7 +46,7 @@ where `/Users/nicolegrillo/Desktop/Tesi/Test_data/` and `~/data_analysis/f_knee_
 
 # Cross correlation
 
-The Python script `error_data_plots.py` computes the cross correlation of data referred to Q1,Q2 and U1,U2 paired detectors. For each polarimeter it returns the plot showing the cross power spectral density (CPSD). 
+The Python script `cross_correlation.py` computes the cross correlation of data referred to Q1,Q2 and U1,U2 paired detectors. For each polarimeter it returns the plot showing the cross power spectral density (CPSD). 
 
 Input arguments required: 
 
