@@ -26,11 +26,19 @@ Input arguments required:
 - Data type (PWR or DEM).
 
 
-### Example
+### Example 1
 
 To operate the analysis on data that was acquired from 14/12/2022 at 16:30:00 to 15/12/2022 at 11:30:00, this is what you would run: 
 
     `./noise_evaluation.py /Users/nicolegrillo/Desktop/Tesi/Test_data/ "2022-12-14 14:30:01" "2022-12-15 13:30:01" R6 ~/data_analysis/complete_noise_interpolation/14-12-2022/R6 DEM`
+  
+where `/Users/nicolegrillo/Desktop/Tesi/Test_data/` and `~/data_analysis/complete_noise_interpolation/14-12-2022/R6` are respectively the data path and the results path in my computer.
+
+### Example 2 (JSON)
+
+To operate the analysis on data that was acquired from 14/12/2022 at 16:30:00 to 15/12/2022 at 11:30:00, this is what you would run: 
+
+    `./noise_evaluation_JSON.py /Users/nicolegrillo/Desktop/Tesi/Test_data/ "2022-12-14 14:30:01" "2022-12-15 13:30:01" R6 ~/data_analysis/complete_noise_interpolation/14-12-2022/R6 DEM`
   
 where `/Users/nicolegrillo/Desktop/Tesi/Test_data/` and `~/data_analysis/complete_noise_interpolation/14-12-2022/R6` are respectively the data path and the results path in my computer.
 
