@@ -14,6 +14,18 @@ Input arguments required:
 - Results path where to save the report;
 - Data type (PWR or DEM).
 
+## Noise characterization - JSON
+The Python script `noise_evaluation_JSON.py` finds the optimal parameters for the noise curve in the Fourier space, with two different methods. It returns a .json file with the parameters for future analysis.
+
+Input arguments required: 
+
+- Data path to .HDF5 files;
+- Date string in .iso format;
+- Polarimeter to which refer the "STABLE_ACQUISITION" tag; 
+- Results path where to save the report;
+- Data type (PWR or DEM).
+
+
 ### Example
 
 To operate the analysis on data that was acquired from 14/12/2022 at 16:30:00 to 15/12/2022 at 11:30:00, this is what you would run: 
